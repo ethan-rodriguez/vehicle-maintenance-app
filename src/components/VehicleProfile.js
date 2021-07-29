@@ -1,5 +1,5 @@
 import React from 'react'
-import VehicleProfileCard from './VehicleProfileCard'
+
 
 const VehicleProfile = ({vehicle, setGarage, garage}) => {
 
@@ -13,7 +13,7 @@ const VehicleProfile = ({vehicle, setGarage, garage}) => {
           'Content-Type': 'application/json',
      }}
 
-    fetch('http://localhost:9292/vehicles/'+ vehicle.id, configOb)
+    fetch(`http://localhost:9292/vehicles/${vehicle.id}`, configOb)
         // .then(resp => resp.json())
         // .then(data => console.log(data))
     
@@ -29,9 +29,7 @@ const VehicleProfile = ({vehicle, setGarage, garage}) => {
     return (
         <div id='vehicle-profile'>
             <h4>Vehicle profile</h4>
-                <p>{vehicle.owner_id}</p>
-                <p>{vehicle.year}</p>
-                <p>{vehicle.make}</p>
+                <p>{vehicle.owner_id}</p><p>{vehicle.year}</p><p>{vehicle.make}</p>
                 <p>{vehicle.modle}</p>
                 <p>{vehicle.vin}</p>
                 <p>{vehicle.mileage}</p>
@@ -40,6 +38,8 @@ const VehicleProfile = ({vehicle, setGarage, garage}) => {
                 
             
         </div>
+
+
     )
 
 

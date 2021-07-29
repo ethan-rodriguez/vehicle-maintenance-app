@@ -1,7 +1,6 @@
 // rafce
 import React, { useState } from 'react'
-import Login from './Login'
-import ReactDOM from 'react-dom';
+
 import '../App.css'
 import { Form, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'

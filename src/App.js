@@ -1,11 +1,10 @@
 
-import ReactDOM from 'react-dom';
+
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Navbar, Container } from 'react-bootstrap'
 import Login from "./components/Login";
 import Garage from "./components/Garage";
-import CreateVehicleProfile from './components/CreateVehicleProfile';
 import UpdateMaintenance from './components/UpdateMaintenance';
 import VehicleProfile from './components/VehicleProfile';
 import Signup from './components/Signup';
@@ -39,13 +38,8 @@ function App() {
 
     useEffect(() => {
         fetchOwner()
-        fetchGarage()
+        // fetchGarage()
     }, [ownerName])
-
-
-    // const handleDelete = (vehicleId) => {
-
-    // }
 
 
   return (
